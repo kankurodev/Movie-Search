@@ -1,0 +1,74 @@
+//----------Base Styles----------//
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: $h1-size;
+}
+
+h2 {
+    font-size: $h2-size;
+}
+
+h3 {
+    font-size: $h3-size;
+}
+
+h4 {
+    font-size: $h4-size;
+}
+
+h5 {
+    font-size: $h5-size;
+}
+
+h6 {
+    font-size: $h6-size;
+}
+
+a {
+    color: $primary-color;
+    
+    &:hover {
+        color: $neutral-color;
+    }
+}
+
+p {
+    font-size: $h4-size;
+}
+
+button {
+    background-color: $primary-color;
+    @include brs(4px, 4px, 4px, 4px);
+    @extend %center-element;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+section {
+    @extend %center-element;
+}
+
+article {
+    background-color: $neutral-color;
+    width: calc (100% / 3);
+    position: relative;
+    
+    &::after {
+        content: ' ';
+        white-space: pre;
+        position: absolute;
+        background-color: $negative-color;
+    }
+}
+
+input {
+    @extend %center-element;
+    background-color: $middle-color;
+    color: $placeholder-color;
+}
