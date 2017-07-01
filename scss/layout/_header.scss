@@ -1,0 +1,53 @@
+header {
+    background: url('/images/header.jpg') no-repeat;
+    background-size: cover;
+    background-position:bottom;
+    position: relative;
+    height: 25rem;
+}
+
+header p {
+    display: inline-block;
+    text-align: center;
+    color: $primary-color;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    font-size: $h3-size;
+    background-color: $negative-color;
+    margin-left: 39%;
+    padding: 0.5rem;
+}
+
+header form {
+    text-align: center;
+}
+
+#search {
+    height: 3rem;
+    width: 35%;
+    border: 1px solid $middle-color;
+    font-size: $h4-size;
+    color: $neutral-color;
+    @include brs(4px, 4px, 4px, 4px);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#search:focus {
+    border: 1px solid $primary-color;
+}
+
+header button {
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    vertical-align: middle;
+    margin-bottom: 0.62rem;
+    font-size: $h5-size;
+    margin-left: 1rem;
+    color: $text-color;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header button:hover {
+    color: $primary-color;
+}

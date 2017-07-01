@@ -1,4 +1,9 @@
+@import 'base/reset';
 @import 'utils/vars';
 @import 'utils/mixins';
 @import 'utils/placeholders';
 @import 'base/base';
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/content';
+@import 'layout/footer';

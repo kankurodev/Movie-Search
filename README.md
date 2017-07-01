@@ -2,14 +2,16 @@
 This project utilizes an API from themoviedb to allow users to search for movies and which will then 
 populate the page with results according to their search query.
 
+## Live Preview
+You can view the live preview of this project [here](https://tobyhorn.github.io/DWS2-Project1/)
+
 ## How To
 Enter a movie you wish to search for using an appropiate keyword and click on the search icon.
 
 ## Credits
 API: themoviedb
-Movie Icon: movie theater by Oliviu Stoian from the Noun Project
-Search Icon: Search by Setyo Ari Wibowo from the Noun Project
-Header: movie theater by Jake Hills from Unsplash
+Movie Icon: Icon made by [Freepik](http://www.flaticon.com/authors/freepik) from [www.flaticon.com](http://www.flaticon.com)
+Header: Movie theater by Peter Szustka from Free Images
 
 ## Author
 Toby Horn

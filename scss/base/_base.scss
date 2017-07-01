@@ -36,34 +36,24 @@ a {
     }
 }
 
+.wrapper, #main {
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 p {
     font-size: $h4-size;
 }
 
 button {
-    background-color: $primary-color;
+    background-color: $neutral-color;
+    color: $primary-color;
     @include brs(4px, 4px, 4px, 4px);
     @extend %center-element;
-    
+    padding: 0.5rem 2rem 0.5rem 2rem;
     &:hover {
         cursor: pointer;
-    }
-}
-
-section {
-    @extend %center-element;
-}
-
-article {
-    background-color: $neutral-color;
-    width: calc (100% / 3);
-    position: relative;
-    
-    &::after {
-        content: ' ';
-        white-space: pre;
-        position: absolute;
-        background-color: $negative-color;
     }
 }
 

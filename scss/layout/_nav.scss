@@ -1,0 +1,43 @@
+nav {
+    background: rgba(17, 17, 17, 0.5);
+}
+
+nav h1 {
+    color: $primary-color;
+    padding-top: 0.5rem;
+    margin-left: 2rem;
+}
+
+nav h1::before {
+    content: "";
+    background: url("/images/movie_icon.png") no-repeat;
+    float: left;
+    background-size: contain;
+    padding: 1.35rem;
+    margin-right: 1rem;
+}
+
+nav h1 a:hover {
+    color: $primary-color;
+}
+
+nav li a{
+    color: $primary-color;
+    display: block;
+    font-size: $h2-size;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 1.5rem;
+}
+
+nav li a[href="index.html"] {
+    color: $neutral-color;
+}
+
+nav ul {
+    position: absolute;
+    right: 14rem;
+    top: 1.1rem;
+}
