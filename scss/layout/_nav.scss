@@ -1,30 +1,32 @@
 nav {
     background: rgba(17, 17, 17, 0.5);
+    position: relative;
 }
 
 nav h1 {
     color: $primary-color;
     padding-top: 0.5rem;
     margin-left: 2rem;
+    
+    &::before {
+        content: "";
+        //background: url("/images/movie_icon.png") no-repeat; //This is to show image locally
+        background: url("/DWS2-Project1/images/movie_icon.png") no-repeat; //This is to show image on Git Pages
+        float: left;
+        background-size: contain;
+        padding: 1.35rem;
+        margin-right: 1rem;
+    }
 }
 
-nav h1::before {
-    content: "";
-    background: url("/images/movie_icon.png") no-repeat;
-    float: left;
-    background-size: contain;
-    padding: 1.35rem;
-    margin-right: 1rem;
-}
-
-nav h1 a:hover {
-    color: $primary-color;
-}
-
-nav li a{
+nav li a {
     color: $primary-color;
     display: block;
     font-size: $h2-size;
+    
+    &:hover {
+        color: $neutral-color;
+    }
 }
 
 nav li {
@@ -38,6 +40,6 @@ nav li a[href="index.html"] {
 
 nav ul {
     position: absolute;
-    right: 14rem;
-    top: 1.1rem;
+    right: 0;
+    top: 1rem;
 }

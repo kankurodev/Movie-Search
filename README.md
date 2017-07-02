@@ -11,6 +11,7 @@ Enter a movie you wish to search for using an appropiate keyword and click on th
 ## Credits
 API: themoviedb
 Movie Icon: Icon made by [Freepik](http://www.flaticon.com/authors/freepik) from [www.flaticon.com](http://www.flaticon.com)
+Star Icon: Icon made by [Maxim Basinski](http://www.flaticon.com/authors/maxim-basinski) from [www.flaticon.com](http://www.flaticon.com)
 Header: Movie theater by Peter Szustka from Free Images
 
 ## Author

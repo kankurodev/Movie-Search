@@ -9,9 +9,9 @@ xhr.onload = function() {
     
     //Create variables to populate the page
     var result = document.querySelectorAll("#results article");
+    var viewMore = document.querySelector("#main a");
     var imgBaseUrl = "https://image.tmdb.org/t/p/w300/";
     var months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-    var viewMore = document.querySelector("#main a");
     
     //verify the 
     if (result !== null) {
@@ -48,6 +48,7 @@ xhr.onload = function() {
         }
     }
      
+    //Make sure the element exists
     if (viewMore !== null) {
         
         //Change the link to it's appropiate value
@@ -55,6 +56,6 @@ xhr.onload = function() {
     }
 }
 
+//Open and send the xhr
 xhr.open("GET", "https://api.themoviedb.org/3/movie/popular?api_key=bf500a5966c902b3fa4dc1fc69fcf904&language=en-US&page=1", true);
-
 xhr.send(null);

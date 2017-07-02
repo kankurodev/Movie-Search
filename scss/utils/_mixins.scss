@@ -4,3 +4,9 @@
     border-bottom-left-radius: $bottomLeft;
     border-bottom-right-radius: $bottomRight;
 }
+
+@mixin clr() {
+    content: "";
+    display: block;
+    clear: both;
+}

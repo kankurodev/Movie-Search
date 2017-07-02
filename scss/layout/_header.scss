@@ -1,5 +1,6 @@
 header {
-    background: url('/images/header.jpg') no-repeat;
+    //background: url('/images/header.jpg') no-repeat; //This is to show image locally
+    background: url('/DWS2-Project1/images/header.jpg') no-repeat; //This is to show image on Git Pages
     background-size: cover;
     background-position:bottom;
     position: relative;
@@ -31,10 +32,10 @@ header form {
     @include brs(4px, 4px, 4px, 4px);
     padding-left: 1rem;
     padding-right: 1rem;
-}
-
-#search:focus {
-    border: 1px solid $primary-color;
+    
+    &:focus {
+        border: 1px solid $primary-color;
+    }
 }
 
 header button {
@@ -46,8 +47,8 @@ header button {
     color: $text-color;
     text-transform: uppercase;
     font-weight: bold;
-}
-
-header button:hover {
-    color: $primary-color;
+    
+    &:hover {
+        color: $primary-color;
+    }
 }

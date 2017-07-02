@@ -9,17 +9,13 @@
 #results {
     width: 100%;
     margin-left: 3.5rem;
-}
-
-#results::after {
-    content: "";
-    display: block;
-    clear: both;
+    &::after {
+        @include clr();
+    }
 }
 
 #results article {
-    float: left;
-    position: relative;
+    display: inline-block;
     margin: 2rem 4rem 2rem 4rem;
     background-color: $negative-color;
 }
@@ -27,8 +23,50 @@
 article h3 {
     max-width: 30rem;
     color: $primary-color;
+    text-align: center;
 }
 
-article p {
+article p:not(.rating) {
     color: $text-color;
+    margin-left: 3.5rem;
+}
+
+article h3, article p {
+    padding: 1rem;
+}
+
+.rating {
+    color: $rating-color;
+    
+    &::before {
+        content: "";
+        //background: url("/images/star.png") no-repeat; //This is to show image locally
+        background: url("/DWS2-Project1/images/star.png") no-repeat; //This is to show image on Git Pages
+        float: left;
+        background-size: contain;
+        padding: 0.7rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.rating, article p {
+    display: inline-block;
+}
+
+#results + P {
+    text-align: center;
+    margin: 5rem 0 5rem 0;
+    
+    & a {
+        display: inline-block;
+        background-color: $primary-color;
+        color: $negative-color;
+        font-weight: bold;
+        padding: 1rem 2rem 1rem 2rem;
+        @include brs(4rem, 4rem, 4rem, 4rem);
+        
+        &:hover {
+            color: $neutral-color;
+        }
+    }
 }

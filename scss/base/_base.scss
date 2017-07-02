@@ -38,8 +38,7 @@ a {
 
 .wrapper, #main {
     max-width: 120rem;
-    margin-left: auto;
-    margin-right: auto;
+    @extend %center-element;
 }
 
 p {
@@ -52,6 +51,7 @@ button {
     @include brs(4px, 4px, 4px, 4px);
     @extend %center-element;
     padding: 0.5rem 2rem 0.5rem 2rem;
+    
     &:hover {
         cursor: pointer;
     }
