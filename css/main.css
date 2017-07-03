@@ -130,7 +130,7 @@ header p {
   margin-bottom: 2rem;
   font-size: 1.9rem;
   background-color: #000;
-  margin-left: 39%;
+  margin-left: 28.3%;
   padding: 0.5rem; }
 
 header form {
@@ -258,6 +258,17 @@ article h3, article p {
     border-bottom-right-radius: 4rem; }
     #results + P a:hover {
       color: #fff; }
+
+.hide {
+  display: none; }
+
+#main .error {
+  color: #b52c2c;
+  text-align: center;
+  display: block;
+  background-color: transparent;
+  margin: 1rem;
+  font-weight: bold; }
 
 footer {
   background-color: #000;

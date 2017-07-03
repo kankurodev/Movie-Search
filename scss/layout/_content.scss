@@ -70,3 +70,16 @@ article h3, article p {
         }
     }
 }
+
+.hide {
+    display: none;
+}
+
+#main .error {
+    color: $error-color;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    margin: 1rem;
+    font-weight: bold;
+}
