@@ -11,7 +11,7 @@ nav h1 {
     &::before {
         content: "";
         //background: url("/images/movie_icon.png") no-repeat; //This is to show image locally
-        background: url("/DWS2-Project1/images/movie_icon.png") no-repeat; //This is to show image on Git Pages
+        background: url("../images/movie_icon.png") no-repeat; //This is to show image on Git Pages
         float: left;
         background-size: contain;
         padding: 1.35rem;

@@ -23,7 +23,8 @@ time, mark, audio, video,
   font: inherit;
   vertical-align: baseline;
   text-decoration: none;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 /* HTML5 - Older browser support
 ====================================================================== */
@@ -115,8 +116,11 @@ input {
   background-color: #4d4d4d;
   color: #666; }
 
+.hide {
+  display: none; }
+
 header {
-  background: url("/DWS2-Project1/images/header.jpg") no-repeat;
+  background: url("../images/header.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
   position: relative;
@@ -173,7 +177,7 @@ nav h1 {
   margin-left: 2rem; }
   nav h1::before {
     content: "";
-    background: url("/DWS2-Project1/images/movie_icon.png") no-repeat;
+    background: url("../images/movie_icon.png") no-repeat;
     float: left;
     background-size: contain;
     padding: 1.35rem;
@@ -202,8 +206,9 @@ nav ul {
   background-color: #000;
   color: #fff;
   display: inline-block;
-  padding: 0.5rem 2rem 0.5rem 1rem;
-  margin: 2rem 0 2rem 7.5rem; }
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 2rem 0 2rem 7.5rem;
+  text-transform: capitalize; }
 
 #results {
   width: 100%;
@@ -234,7 +239,7 @@ article h3, article p {
   color: #fac919; }
   .rating::before {
     content: "";
-    background: url("/DWS2-Project1/images/star.png") no-repeat;
+    background: url("../images/star.png") no-repeat;
     float: left;
     background-size: contain;
     padding: 0.7rem;
@@ -258,9 +263,6 @@ article h3, article p {
     border-bottom-right-radius: 4rem; }
     #results + P a:hover {
       color: #fff; }
-
-.hide {
-  display: none; }
 
 #main .error {
   color: #b52c2c;
