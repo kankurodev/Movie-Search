@@ -72,6 +72,9 @@ table {
 html {
   font-size: 62.5%; }
 
+body {
+  height: 100%; }
+
 h1 {
   font-size: 3.2rem; }
 
@@ -98,6 +101,9 @@ a {
 .wrapper, #main {
   max-width: 120rem; }
 
+#wrapper {
+  min-height: 100%; }
+
 p {
   font-size: 1.6rem; }
 
@@ -123,19 +129,22 @@ header {
   background: url("../images/header.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
-  position: relative;
   height: 25rem; }
 
 header p {
-  display: inline-block;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #01d277;
   margin-top: 7rem;
   margin-bottom: 2rem;
   font-size: 1.9rem;
-  background-color: #000;
-  margin-left: 28.3%;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px #000, -1px -1px 4px #000; }
 
 header form {
   text-align: center; }
@@ -169,90 +178,109 @@ header button {
 
 nav {
   background: rgba(17, 17, 17, 0.5);
-  position: relative; }
+  height: 4.5rem; }
 
 nav h1 {
   color: #01d277;
   padding-top: 0.5rem;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+  float: left; }
   nav h1::before {
     content: "";
     background: url("../images/movie_icon.png") no-repeat;
-    float: left;
     background-size: contain;
-    padding: 1.35rem;
-    margin-right: 1rem; }
+    padding: 0 1.35rem 0 1.35rem;
+    margin: 0 1rem 0 0;
+    vertical-align: middle; }
 
 nav li a {
   color: #01d277;
-  display: block;
   font-size: 2.4rem; }
   nav li a:hover {
     color: #fff; }
 
 nav li {
-  display: inline-block;
-  padding: 0 1.5rem; }
+  padding: 0 1.5rem;
+  -ms-flex-item-align: center;
+      align-self: center; }
 
 nav li a[href="index.html"] {
   color: #fff; }
 
 nav ul {
-  position: absolute;
-  right: 0;
-  top: 1rem; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 4.5rem; }
+
+#main {
+  padding-bottom: 7rem; }
 
 #main h2 {
-  background-color: #000;
   color: #fff;
-  display: inline-block;
+  background-color: #000;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  margin: 2rem 0 2rem 7.5rem;
-  text-transform: capitalize; }
+  margin: 2rem 0 2rem 10.5rem;
+  text-transform: capitalize;
+  display: inline-block; }
 
 #results {
-  width: 100%;
-  margin-left: 3.5rem; }
-  #results::after {
-    content: "";
-    display: block;
-    clear: both; }
+  width: calc(100% - 3.5rem);
+  margin-left: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 #results article {
-  display: inline-block;
-  margin: 2rem 4rem 2rem 4rem;
-  background-color: #000; }
+  margin: 4rem;
+  background-color: #000;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 article h3 {
   max-width: 30rem;
   color: #01d277;
   text-align: center; }
 
-article p:not(.rating) {
-  color: #666;
-  margin-left: 3.5rem; }
-
-article h3, article p {
+article h3 {
   padding: 1rem; }
 
+article p {
+  padding: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
+article p:not(.rating) {
+  color: #666;
+  vertical-align: middle;
+  margin: 0 0 0 3rem; }
+
 .rating {
-  color: #fac919; }
+  color: #fac919;
+  vertical-align: middle; }
   .rating::before {
     content: "";
     background: url("../images/star.png") no-repeat;
-    float: left;
     background-size: contain;
-    padding: 0.7rem;
-    margin-right: 0.5rem; }
+    padding: 0 0.7rem 0 0.7rem;
+    margin-right: 0.5rem;
+    vertical-align: middle; }
 
-.rating, article p {
-  display: inline-block; }
-
-#results + P {
+#results + p {
   text-align: center;
   margin: 5rem 0 5rem 0; }
-  #results + P a {
-    display: inline-block;
+  #results + p a {
     background-color: #01d277;
     color: #000;
     font-weight: bold;
@@ -261,7 +289,7 @@ article h3, article p {
     border-top-right-radius: 4rem;
     border-bottom-left-radius: 4rem;
     border-bottom-right-radius: 4rem; }
-    #results + P a:hover {
+    #results + p a:hover {
       color: #fff; }
 
 #main .error {
@@ -274,7 +302,12 @@ article h3, article p {
 
 footer {
   background-color: #000;
-  padding: 2.5rem 0 2.5rem 0; }
+  padding: 2.5rem 0 2.5rem 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 7rem; }
 
 footer h3 {
   color: #01d277;

@@ -1,22 +1,20 @@
 header {
-    //background: url('/images/header.jpg') no-repeat; //This is to show image locally
-    background: url('../images/header.jpg') no-repeat; //This is to show image on Git Pages
+    background: url('../images/header.jpg') no-repeat;
     background-size: cover;
     background-position:bottom;
-    position: relative;
     height: 25rem;
 }
 
 header p {
-    display: inline-block;
-    text-align: center;
+    display: flex;
     color: $primary-color;
     margin-top: 7rem;
     margin-bottom: 2rem;
     font-size: $h3-size;
-    background-color: $negative-color;
-    margin-left: 28.3%;
     padding: 0.5rem;
+    justify-content: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px $negative-color, -1px -1px 4px $negative-color;
 }
 
 header form {

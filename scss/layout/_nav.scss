@@ -1,27 +1,26 @@
 nav {
     background: rgba(17, 17, 17, 0.5);
-    position: relative;
+    height: 4.5rem;
 }
 
 nav h1 {
     color: $primary-color;
     padding-top: 0.5rem;
     margin-left: 2rem;
+    float: left;
     
     &::before {
         content: "";
-        //background: url("/images/movie_icon.png") no-repeat; //This is to show image locally
-        background: url("../images/movie_icon.png") no-repeat; //This is to show image on Git Pages
-        float: left;
+        background: url("../images/movie_icon.png") no-repeat;
         background-size: contain;
-        padding: 1.35rem;
-        margin-right: 1rem;
+        padding: 0 1.35rem 0 1.35rem;
+        margin: 0 1rem 0 0;
+        vertical-align: middle;
     }
 }
 
 nav li a {
     color: $primary-color;
-    display: block;
     font-size: $h2-size;
     
     &:hover {
@@ -30,8 +29,8 @@ nav li a {
 }
 
 nav li {
-    display: inline-block;
     padding: 0 1.5rem;
+    align-self: center;
 }
 
 nav li a[href="index.html"] {
@@ -39,7 +38,7 @@ nav li a[href="index.html"] {
 }
 
 nav ul {
-    position: absolute;
-    right: 0;
-    top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    height: 4.5rem;
 }

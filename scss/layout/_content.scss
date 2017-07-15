@@ -1,24 +1,28 @@
+#main {
+    padding-bottom: 7rem;
+}
+
 #main h2 {
-    background-color: $negative-color;
     color: $neutral-color;
-    display: inline-block;
+    background-color: $negative-color;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    margin: 2rem 0 2rem 7.5rem;
+    margin: 2rem 0 2rem 10.5rem;
     text-transform: capitalize;
+    display: inline-block;
 }
 
 #results {
-    width: 100%;
+    width: calc(100% - 3.5rem);
     margin-left: 3.5rem;
-    &::after {
-        @include clr();
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #results article {
-    display: inline-block;
-    margin: 2rem 4rem 2rem 4rem;
+    margin: 4rem;
     background-color: $negative-color;
+    flex-direction: column;
 }
 
 article h3 {
@@ -27,39 +31,41 @@ article h3 {
     text-align: center;
 }
 
-article p:not(.rating) {
-    color: $text-color;
-    margin-left: 3.5rem;
+article h3 {
+    padding: 1rem;
 }
 
-article h3, article p {
+article p {
     padding: 1rem;
+    display: inline-flex;
+}
+
+article p:not(.rating) {
+    color: $text-color;
+    vertical-align: middle;
+    margin: 0 0 0 3rem;
 }
 
 .rating {
     color: $rating-color;
+    vertical-align: middle;
     
     &::before {
         content: "";
-        //background: url("/images/star.png") no-repeat; //This is to show image locally
-        background: url("../images/star.png") no-repeat; //This is to show image on Git Pages
-        float: left;
+        background: url("../images/star.png") no-repeat;
         background-size: contain;
-        padding: 0.7rem;
+        padding: 0 0.7rem 0 0.7rem;
         margin-right: 0.5rem;
+        vertical-align: middle;
     }
 }
 
-.rating, article p {
-    display: inline-block;
-}
-
-#results + P {
+#results + p {
     text-align: center;
     margin: 5rem 0 5rem 0;
     
+    
     & a {
-        display: inline-block;
         background-color: $primary-color;
         color: $negative-color;
         font-weight: bold;

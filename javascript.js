@@ -37,6 +37,7 @@ function setup() {
                     }
                     mainh2.innerHTML = "Search Results";
                     mainh2.classList.remove("error");
+                    document.querySelector('#wrapper').style.position = "relative";
                  
                     //Declare variables
                     const imgBaseUrl = "https://image.tmdb.org/t/p/w300";
@@ -54,7 +55,7 @@ function setup() {
                             if (resObj.results[i].poster_path === null || resObj.results[i].poster_path === undefined || resObj.results[i].poster_path === "") {
 
                                 //If the image is null then use placeholder image
-                                movieImgSrc[i] = "../images/no_img.jpg";
+                                movieImgSrc[i] = "./images/no_img.jpg";
                             }
                             else {
                                 //Change the src for the image to it's proper values
@@ -102,22 +103,33 @@ function setup() {
                         mainh2.classList.add("error");
                     }
                     viewMoreBtn.classList.add("hide");
+                    document.querySelector('#wrapper').style.position = "";
                 }
             }
             
             //If error 401 occurs let user know why
             if (xhr.status === 401) {
                 console.log("Error: Invalid API key!");
+                mainh2.classList.add("error");
+                document.querySelector('#wrapper').style.position = "";
+                viewMoreBtn.classList.add("hide");
             }
             
             //If error 404 occurs let user know why
             if (xhr.status === 404) {
                 alert("Error: 404 Not Fount!");
+                mainh2.classList.add("error");
+                document.querySelector('#wrapper').style.position = "";
+                viewMoreBtn.classList.add("hide");
             }
             
             //If error 422 occurs let user know why
             if (xhr.status === 422) {
                 alert("Error: Please do not leave blank!");
+                mainh2.innerHTML = ("Error: Do not leave blank");
+                mainh2.classList.add("error");
+                document.querySelector('#wrapper').style.position = "";
+                viewMoreBtn.classList.add("hide");
             }
         };
         

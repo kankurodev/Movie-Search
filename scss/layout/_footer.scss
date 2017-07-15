@@ -1,6 +1,11 @@
 footer {
     background-color: $negative-color;
     padding: 2.5rem 0 2.5rem 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 7rem;
 }
 
 footer h3 {
