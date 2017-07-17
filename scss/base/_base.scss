@@ -10,18 +10,42 @@ body {
 
 h1 {
     font-size: $h1-size;
+    @include mq(medium) {
+        font-size: $h2-size;
+    }
+    @include mq(small) {
+        font-size: $h3-size;
+    }
 }
 
 h2 {
     font-size: $h2-size;
+    @include mq(medium) {
+        font-size: $h3-size;
+    }
+    @include mq(small) {
+        font-size: $h4-size;
+    }
 }
 
 h3 {
     font-size: $h3-size;
+    @include mq(medium) {
+        font-size: $h4-size;
+    }
+    @include mq(small) {
+        font-size: $h5-size;
+    }
 }
 
 h4 {
     font-size: $h4-size;
+    @include mq(medium) {
+        font-size: $h5-size;
+    }
+    @include mq(small) {
+        font-size: $h6-size;
+    }
 }
 
 h5 {
@@ -51,6 +75,12 @@ a {
 
 p {
     font-size: $h4-size;
+    @include mq(medium) {
+        font-size: $h5-size;
+    }
+    @include mq(small) {
+        font-size: $h6-size;
+    }
 }
 
 button {

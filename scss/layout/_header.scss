@@ -10,11 +10,22 @@ header p {
     color: $primary-color;
     margin-top: 7rem;
     margin-bottom: 2rem;
-    font-size: $h3-size;
     padding: 0.5rem;
     justify-content: center;
     font-weight: bold;
     text-shadow: 1px 1px 4px $negative-color, -1px -1px 4px $negative-color;
+    
+    @include mq(large) {
+        font-size: $h3-size;
+    }
+    @include mq(medium) {
+        font-size: $h4-size;
+    }
+    @include mq(small) {
+        font-size: $h5-size;
+        margin-top: 0;
+        padding: 10rem 10rem 0 0;
+    }
 }
 
 header form {
@@ -25,11 +36,20 @@ header form {
     height: 3rem;
     width: 35%;
     border: 1px solid $middle-color;
-    font-size: $h4-size;
     color: $neutral-color;
     @include brs(4px, 4px, 4px, 4px);
     padding-left: 1rem;
     padding-right: 1rem;
+    
+    @include mq(large) {
+        font-size: $h4-size;
+    }
+    @include mq(medium) {
+        font-size: $h5-size;
+    }
+    @include mq(small) {
+        font-size: $h6-size;
+    }
     
     &:focus {
         border: 1px solid $primary-color;
@@ -37,16 +57,44 @@ header form {
 }
 
 header button {
-    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
-    vertical-align: middle;
-    margin-bottom: 0.62rem;
-    font-size: $h5-size;
     margin-left: 1rem;
     color: $text-color;
     text-transform: uppercase;
     font-weight: bold;
+    margin-bottom: 0.62rem;
+    font-size: $h5-size;
+    
+    
+    @include mq(large) {
+        padding: 0.8rem 1.5rem 0.65rem 1.5rem;
+    }
+    @include mq(medium) {
+        padding: 0.77rem 1.5rem 0.77rem 1.5rem;
+    }
+    @include mq(small) {
+        padding: 0.77rem 1.5rem 0.77rem 1.5rem;
+    }
     
     &:hover {
         color: $primary-color;
     }
+}
+
+header img {
+    @include mq(large) {
+        display: none;
+    }
+    @include mq(medium) {
+        display: none;
+    }
+    @include mq(small) {
+        float: left;
+        display: inline-block;
+        padding: 1rem;
+        height: 4rem;
+    }
+}
+
+#close {
+    display: none;
 }

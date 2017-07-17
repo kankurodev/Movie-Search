@@ -1,6 +1,16 @@
 nav {
     background: rgba(17, 17, 17, 0.5);
-    height: 4.5rem;
+    @include mq(large) {
+        height: 4.5rem;
+    }
+    @include mq(medium) {
+        height: 3.5rem;
+    }
+    @include mq(small) {
+        background: none;
+        height: 3.3rem;
+        display: none;
+    }
 }
 
 nav h1 {
@@ -9,19 +19,40 @@ nav h1 {
     margin-left: 2rem;
     float: left;
     
+    @include mq(small) {
+        display: none;
+    }
+    
     &::before {
         content: "";
         background: url("../images/movie_icon.png") no-repeat;
         background-size: contain;
-        padding: 0 1.35rem 0 1.35rem;
         margin: 0 1rem 0 0;
         vertical-align: middle;
+        
+        @include mq(large) {
+            padding: 0 1.35rem 0 1.35rem;
+        }
+        @include mq(medium) {
+            padding: 0 1rem 0 1rem;
+        }
+        @include mq(small) {
+            padding: 0 0.8rem 0 0.8rem;
+        }
     }
 }
 
 nav li a {
     color: $primary-color;
-    font-size: $h2-size;
+    @include mq(large) {
+        font-size: $h2-size;
+    }
+    @include mq(medium) {
+        font-size: $h3-size;
+    }
+    @include mq(small) {
+        font-size: $h4-size;
+    }
     
     &:hover {
         color: $neutral-color;
@@ -31,6 +62,10 @@ nav li a {
 nav li {
     padding: 0 1.5rem;
     align-self: center;
+    @include mq(small) {
+        align-self: flex-start;
+        margin: 1rem 0;
+    }
 }
 
 nav li a[href="index.html"] {
@@ -40,5 +75,21 @@ nav li a[href="index.html"] {
 nav ul {
     display: flex;
     justify-content: flex-end;
-    height: 4.5rem;
+    @include mq(large) {
+        height: 4.5rem;
+    }
+    @include mq(medium) {
+        height: 3.5rem;
+    }
+    @include mq(small) {
+        justify-content: flex-start;
+        
+        &::before {
+            content: "";
+            background: url("../images/movie_icon.png") no-repeat;
+            background-size: contain;
+            padding: 1rem;
+            margin: 1rem 0 1rem 2.5rem;
+        }
+    }
 }

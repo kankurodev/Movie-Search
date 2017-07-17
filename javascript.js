@@ -3,6 +3,15 @@ function setup() {
     
     //Create the button variable
     const btn = document.getElementById('searchBtn');
+    let query = document.getElementById('search').value;
+    const open = document.getElementById('open');
+    const close = document.getElementById('close');
+    const nav = document.querySelector('nav');
+    
+    if (localStorage.getItem('query')) {
+        query = localStorage.getItem('query');
+        searchDB();
+    }
     
     //Create the searchDB fuction
     function searchDB() {
@@ -15,7 +24,10 @@ function setup() {
         const viewMoreLink = document.querySelector("#main a");
         const viewMoreBtn = main.querySelector("#results + p");
         const mainh2 = document.querySelector('main h2');
-        const query = document.getElementById('search').value;
+        if (document.getElementById('search').value !== "") {
+            query = document.getElementById('search').value;
+            localStorage.setItem('query', query);
+        }
         const url = 'https://api.themoviedb.org/3/search/movie?api_key=bf500a5966c902b3fa4dc1fc69fcf904&language=en-US&query=' + query;
         
         //Create and call the onload function
@@ -95,6 +107,7 @@ function setup() {
                     //set the view more link to the search page for the user's query
                     viewMoreLink.href = "https://www.themoviedb.org/search?query=" + query;
                     mainh2.innerHTML = "Results for " + query;
+                    localStorage.setItem('query', query);
                     
                 }
                 else {
@@ -143,6 +156,20 @@ function setup() {
         xhr.send(null);
     }
     
+    function openMenu() {
+        
+        open.style.display = "none";
+        close.style.display = "inline-block";
+        nav.style.display = "block";
+    }
+    
+    function closeMenu() {
+        
+        close.style.display = "none";
+        nav.style.display = "none";
+        open.style.display = "inline-block";
+    }
+    
     document.getElementById('search').addEventListener('keypress', function (e) {
         if (e.keyCode === 13) {
             e.preventDefault();
@@ -155,6 +182,14 @@ function setup() {
         
         //Listen for the click event
         btn.addEventListener('click', searchDB, false);
+    }
+    
+    if (open !== null) {
+        open.addEventListener('click', openMenu, false);
+    }
+    
+    if (close !== null) {
+        close.addEventListener('click', closeMenu, false);
     }
 }
 
